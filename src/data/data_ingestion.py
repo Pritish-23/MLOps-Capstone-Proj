@@ -76,7 +76,7 @@ def main():
         # test_size = 0.2
         
         # df = load_data(data_url='https://raw.githubusercontent.com/vikashishere/Datasets/refs/heads/main/data.csv')
-        s3 = s3_connection.s3_operations("capstone-proj23", "AWS ACCESS KEY ID", "AWS SECRET ACCESS KEY")
+        s3 = s3_connection.s3_operations("capstone-proj23", "AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY")
         df = s3.fetch_file_from_s3("data.csv")
 
 
