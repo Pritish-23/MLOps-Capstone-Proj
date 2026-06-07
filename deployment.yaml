@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: capstone-proj
-        image: 020866158197.dkr.ecr.us-east-1.amazonaws.com/capstone-proj:latest
+        image: 875285643722.dkr.ecr.us-east-1.amazonaws.com/capstone-proj:latest
         ports:
         - containerPort: 5000
         resources:
