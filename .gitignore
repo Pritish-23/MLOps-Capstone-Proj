@@ -218,7 +218,7 @@ __marimo__/
 .streamlit/secrets.toml
 
 credentials.txt
-local_s3
+local_s3/
 
 data/
 models/
