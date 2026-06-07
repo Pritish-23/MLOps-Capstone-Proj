@@ -47,7 +47,6 @@ jobs:
           echo "Secret length: ${#AWS_SECRET_ACCESS_KEY}"
           echo "Region: $AWS_DEFAULT_REGION"
           aws sts get-caller-identity
-        run: |
           dvc repro
 
       - name: Run model tests
