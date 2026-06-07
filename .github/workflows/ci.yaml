@@ -36,6 +36,17 @@ jobs:
       - name: run pipeline
         env:
           CAPSTONE_TEST: ${{ secrets.CAPSTONE_TEST }}
+
+      - name: Debug AWS credentials
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
+        run: |
+          echo "Key ID length: ${#AWS_ACCESS_KEY_ID}"
+          echo "Secret length: ${#AWS_SECRET_ACCESS_KEY}"
+          echo "Region: $AWS_DEFAULT_REGION"
+          aws sts get-caller-identity
         run: |
           dvc repro
 
