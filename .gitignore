@@ -216,7 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
 credentials.txt
 local_s3
 
 data/
+models/
