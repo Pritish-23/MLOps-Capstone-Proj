@@ -144,7 +144,7 @@ kubectl get svc
 kubectl get svc flask-app-service
 
 49. Try externa-ip:5000 directly on url or on terminal : curl http://external-ip:5000
-curl http://a6bf6255d5f61470c9782b8955c98271-1409247973.us-east-1.elb.amazonaws.com:5000
+curl http://a981dedc61b4545bb824332c1479b008-1742789621.us-east-1.elb.amazonaws.com:5000
 
 
 
@@ -179,7 +179,7 @@ global:
 scrape_configs:
   - job_name: "flask-app"
     static_configs:
-      - targets: ["a6bf6255d5f61470c9782b8955c98271-1409247973.us-east-1.elb.amazonaws.com:5000"]  # Replace with your app's External IP
+      - targets: ["a981dedc61b4545bb824332c1479b008-1742789621.us-east-1.elb.amazonaws.com:5000"]  # Replace with your app's External IP
 
 
 
@@ -228,7 +228,7 @@ sudo apt update && sudo apt upgrade -y
 
 AWS Resource Cleanup:
 
-* Delete deployment - kubectl delete deployment flask-app
+* Delete deployment - kubectl delete deployment capstone-proj
 * Delete service - kubectl delete service flask-app-service
 * Delete env var - kubectl delete secret capstone-secret
 * Delete EKS Cluster - eksctl delete cluster --name flask-app-cluster --region us-east-1

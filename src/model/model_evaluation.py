@@ -29,12 +29,6 @@ repo_name = "MLOps-Capstone-Proj"
 mlflow.set_tracking_uri(f'{dagshub_url}/{repo_owner}/{repo_name}.mlflow')
 # -------------------------------------------------------------------------------------
 
-# Below code block is for local use
-# -------------------------------------------------------------------------------------
-# mlflow.set_tracking_uri('https://dagshub.com/Pritish-23/MLOps-Capstone-Proj.mlflow')
-# dagshub.init(repo_owner='Pritish-23', repo_name='MLOps-Capstone-Proj', mlflow=True)
-# -------------------------------------------------------------------------------------
-
 
 def load_model(file_path: str):
     """Load the trained model from a file."""
